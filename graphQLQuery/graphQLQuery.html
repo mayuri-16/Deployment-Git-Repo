@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : Mayuri Ubale
+  @group             : 
+  @last modified on  : 02-03-2024
+-->
+<template>
+    <lightning-card title="Graph QL" icon-name="custom:custom55">
+        <div class="slds-m-around_larger">
+            <lightning-input type="search" placeholder="Search contacts with Name" label="Search Contact" onchange={handleChange}>
+                
+            </lightning-input>
+        </div>
+        <div class="slds-m-around_larger">
+            <template if:true={records} for:each={records} for:item="rec" for:index="index">
+                <div class="slds-m-around_small" key={rec.node.id}>
+                    <p>{rec.node.Name.value}</p>
+                    <p>{rec.node.Account.Name.value}</p>
+                    <p>{rec.node.Email.value}</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>
