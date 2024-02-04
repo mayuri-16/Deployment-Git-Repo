@@ -29,6 +29,10 @@ GraphQL :
       propertyOrFunction;
     }
 
+
+    Example of GraphQL code is present in Repo:
+            ![Example of GraphLQ](https://github.com/mayuri-16/Deployment-Git-Repo/assets/73846347/cebcdde2-b9cb-4377-9946-35fe808d315b)
+
     
  How to use it:
    1. Validate your query:
