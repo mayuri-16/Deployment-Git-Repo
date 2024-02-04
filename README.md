@@ -1,6 +1,6 @@
 GraphQL :
-     GraphQL is query language for API and provides runtime to execute the queries on the existing data that are available on your database it could be salesforce or outside of Salesforce platform.
-     GraphQL is basically to give you the ability to query the records inside LWC itself wothout writing even a single line ot Apex code.
+     GraphQL is the query language for API and provides runtime to execute the queries on the existing data that are available on your database it could be Salesforce or outside of the Salesforce platform.
+     GraphQL is basically to give you the ability to query the records inside LWC itself without writing even a single line of Apex code.
      
   Syntax to write GraphQL in LWC:
     import { LightningElement, wire } from "lwc";
@@ -30,16 +30,23 @@ GraphQL :
     }
 
 
-    Example of GraphQL code is present in Repo:
-            ![Example of GraphLQ](https://github.com/mayuri-16/Deployment-Git-Repo/assets/73846347/cebcdde2-b9cb-4377-9946-35fe808d315b)
+    An example of GraphQL code is present in Repo:
 
+![Example of GraphLQ](https://github.com/mayuri-16/Deployment-Git-Repo/assets/73846347/dbcafafd-17ad-4b45-afcd-424ce7d59418)
+
+to set into Altair Client :
+    1. Open Altair Client Extension on Browser 
+    2. Click on Header and write Header Key and Header Value :
+        Header Key   => Authorization
+        Header Value => Bearer {Accssess Token of connected org}
+    3. Save
     
  How to use it:
    1. Validate your query:
         Use Altair (with Salesforce APIs) tools to validate your query. These clients allow you to quickly iterate on your query and ensure that it retrieves exactly the information your component needs.
    2. Import the adapter:
        Import the Salesforce GraphQL Wire Adapter (graphql) and tagged template function (gql) into your LWC’s code.
-      gql identifies the GraphQL queries within your component source code so that the framework can handle them correctly.
+      gql identifies the GraphQL queries within your component source code so the framework can handle them correctly.
       graphql is the wire adapter used to retrieve the results of your GraphQL query.
   3. Invoke your query:
       Use the imported graphql wire adapter to evaluate the GraphQL query and get the data you need.
@@ -47,7 +54,7 @@ GraphQL :
 
      
 The benefits of the GraphQL Wire Adapter:
-  1. Native queryability for LWCs:
+  1. Native query ability for LWCs:
       Query Salesforce data using industry-standard query language with rich predicates. 
       Developers can now easily and efficiently query Salesforce data in their LWCs, without needing to use Apex to handle data queries.
   2. A single endpoint and data aggregation:
