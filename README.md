@@ -34,12 +34,12 @@ GraphQL :
 
 ![Example of GraphLQ](https://github.com/mayuri-16/Deployment-Git-Repo/assets/73846347/dbcafafd-17ad-4b45-afcd-424ce7d59418)
 
-to set into Altair Client :
-    1. Open Altair Client Extension on Browser 
-    2. Click on Header and write Header Key and Header Value :
+To set into Altair Client :
+ 1. Open Altair Client Extension on Browser 
+ 2. Click on Header and write Header Key and Header Value :
         Header Key   => Authorization
         Header Value => Bearer {Accssess Token of connected org}
-    3. Save
+ 3. Save
     
  How to use it:
    1. Validate your query:
