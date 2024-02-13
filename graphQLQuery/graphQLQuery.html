@@ -1,24 +1,33 @@
-<!--
-  @description       : 
-  @author            : Mayuri Ubale
-  @group             : 
-  @last modified on  : 02-03-2024
--->
 <template>
-    <lightning-card title="Graph QL" icon-name="custom:custom55">
+    <lightning-card title="Graph QL" icon-name="Standard:contact">
+        <lightning-spinner variant="brand" size="small" if:true={isLoading}></lightning-spinner>
         <div class="slds-m-around_larger">
             <lightning-input type="search" placeholder="Search contacts with Name" label="Search Contact" onchange={handleChange}>
                 
             </lightning-input>
         </div>
-        <div class="slds-m-around_larger">
-            <template if:true={records} for:each={records} for:item="rec" for:index="index">
+            <!--template if:true={records} for:each={records} for:item="rec" for:index="index">
                 <div class="slds-m-around_small" key={rec.node.id}>
                     <p>{rec.node.Name.value}</p>
                     <p>{rec.node.Account.Name.value}</p>
                     <p>{rec.node.Email.value}</p>
                 </div>
-            </template>
+            </template!-->
+        <div class="slds-m-around_larger">
+            <lightning-datatable
+            key-field="Id"
+            columns={columnsList}
+            data={dataList}>
+        </lightning-datatable>
+        <p class="slds-text-align_center slds-p-top_medium" style="color: lightseagreen;">
+            Displaying page {pageNumber} of {totalPages} from total records {totalCount}.
+        </p>
+        </div>
+        <div class="slds-m-around_larger">
+            <lightning-button variant="brand" disabled={disableReset} icon-name="action:reset_password" onclick={handleReset}></lightning-button>
+            <lightning-button class="slds-float_right" disabled={disableNextButton} variant="brand" icon-name="utility:chevronright" onclick={handleNext}>
+
+            </lightning-button>
         </div>
     </lightning-card>
     
